@@ -67,7 +67,7 @@ export default function Chat() {
       type: "1"
     }]);
 
-  const chats = [
+  const chats2 = [
     {
       user: "Ayham",
       imgSrc: "/image/ayham_abu_khamish.jpg",
@@ -103,7 +103,44 @@ export default function Chat() {
       imgSrc: "/image/yazan.jpg",
       messages: messages
     },
-  ];
+  ]
+  const [chats, setChats] = useState([
+    {
+      user: "Ayham",
+      imgSrc: "/image/ayham_abu_khamish.jpg",
+      messages: messages
+    },
+    {
+      user: "Amr",
+      imgSrc: "/image/amr.jpg",
+      messages: messages
+    },
+    {
+      user: "Boooz",
+      imgSrc: "/image/booz.jpg",
+      messages: messages
+    },
+    {
+      user: "saloom",
+      imgSrc: "/image/saloom.jpg",
+      messages: messages
+    },
+    {
+      user: "hisham",
+      imgSrc: "/image/hisham.jpg",
+      messages: messages
+    },
+    {
+      user: "laith",
+      imgSrc: "/image/laith.jpg",
+      messages: messages
+    },
+    {
+      user: "yazan",
+      imgSrc: "/image/yazan.jpg",
+      messages: messages
+    },
+  ]);
 
   const [message, setMessage] = useState('');
   const onChangeHandler = (e) => {
@@ -127,12 +164,29 @@ export default function Chat() {
     setMessages(d);
     console.log(messages);
   }
-  
+
+  const onFilterdHandler = (e) => {
+    const filterdWith = e.target.value.trimStart();
+    const chats1 = chats2
+    const filterdChats = chats1.filter(chat => {
+      const ok = chat
+        .user
+        .toLowerCase()
+        .includes(filterdWith.toLowerCase())
+      console.log(ok)
+      return (
+        ok
+      );
+    })
+    setChats(filterdChats);
+    console.log(filterdWith, filterdWith.trimStart().length, filterdChats, chats2)
+  }
+
   return (
-    <MDBContainer  fluid className="py-3">
+    <MDBContainer fluid className="py-3">
       <MDBRow>
         <MDBCol md="7" lg="6" xl="5" className="mb-4 mb-md-0">
-         
+
           <MDBCard style={{
             border: '2px solid #000',
             padding: '15px',
@@ -142,7 +196,7 @@ export default function Chat() {
           }}>
             <MDBCardBody>
               <MDBTypography listUnStyled className="mb-0">
-              <Bar/>
+                <Bar onFilterdHandler={onFilterdHandler} />
                 {chats.map((c) => <ChatCard chat={c} />)}
               </MDBTypography>
             </MDBCardBody>

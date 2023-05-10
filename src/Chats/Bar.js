@@ -51,7 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Bar() {
+export default function Bar({onFilterdHandler}) {
   return (
     
     <Box  sx={{ flexGrow: 1 }}>
@@ -79,6 +79,7 @@ export default function Bar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+            onChange={onFilterdHandler}
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />

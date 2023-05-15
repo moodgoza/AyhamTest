@@ -36,12 +36,23 @@ const CreateGroupForm = (props) => {
   return (
     <>
     
-      <Button
+     <div style={{
+            border: '2px solid #000',
+            padding: '15px',
+            marginRight: "50px",
+            overflowY: 'auto',
+            height: '158px',
+            maxWidth: "80%"
+          }}>
+      <p>
+        
+      </p>
+      <Button variant="outline-secondary"
         onClick={toggleShow}
-        style={{position: 'fixed'}}
       >
-        +Blog
+        create your post now!!
       </Button>
+     </div>
       <Form
         onSubmit={onSubmit}
         style={{

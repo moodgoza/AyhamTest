@@ -26,42 +26,42 @@ export default function Chat() {
   const [messages, setMessages] = useState([
     {
       date: "21/11/2005",
-      content: "Hello My sir abo ghozah",
+      content: "dddddddddddddddddddddddd",
       user: "Ayham",
       imgSrc: "/image/ayham_abu_khamish.jpg",
       type: "1"
     },
     {
       date: "21/11/2005",
-      content: "HI, whats your name boy",
+      content: "hhhhhhhhhhhhhhhhhhhhhhhhhhhy",
       user: "Mahmoud",
       imgSrc: "/image/mahmoud_abu_ghozah.jpg",
       type: "2"
     },
     {
       date: "21/11/2005",
-      content: "My name is Ayham full stack al fataaaaaaaaaaaaaaaak",
+      content: " ataaaaaaaaaaaaaaaa",
       user: "Ayham",
       imgSrc: "/image/ayham_abu_khamish.jpg",
       type: "1"
     },
     {
       date: "21/11/2005",
-      content: "My name is Ayham full stack al fataaaaaaaaaaaaaaaak",
+      content: "dasasasasasasasasasasasasasadsa",
       user: "Ayham",
       imgSrc: "/image/ayham_abu_khamish.jpg",
       type: "1"
     },
     {
       date: "21/11/2005",
-      content: "My name is Ayham full stack al fataaaaaaaaaaaaaaaak",
+      content: "dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       user: "Ayham",
       imgSrc: "/image/ayham_abu_khamish.jpg",
       type: "1"
     },
     {
       date: "21/11/2005",
-      content: "My name is aaaaaaaaaaaaaaaak",
+      content: "dddddddddddddddddddddddddddddddddd",
       user: "Ayham",
       imgSrc: "/image/ayham_abu_khamish.jpg",
       type: "1"
